@@ -1,0 +1,13 @@
+.slider {
+  padding-block: 2rem;
+  background-color: $white;
+  display: flex;
+  .list {
+    display: flex;
+    white-space: nowrap;
+    animation: autoRun 32s infinite linear;
+    &__item {
+      margin: 0 7rem;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.header {
+  max-height: 145vh;
+  position: relative;
+  padding: 0 5rem;
+  padding-top: 8rem;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($color-accent-red-medium, 0.94),
+      rgba($color-accent-red, 1)
+    ),
+    url(../img/KV-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  -webkit-clip-path: circle(90% at 50% -16%);
+  clip-path: circle(90% at 50% -16%);
+  @include QueryFor(Tab-Port) {
+    -webkit-clip-path: circle(90% at 50% -5%);
+    clip-path: circle(90% at 50% -5%);
+  }
+  @include QueryFor(Phone) {
+    -webkit-clip-path: circle(85% at 50% -3%);
+    clip-path: circle(85% at 50% -3%);
+  }
+  @include QueryFor(Large-Scrn) {
+    -webkit-clip-path: circle(90% at 50% -12%);
+    clip-path: circle(90% at 50% -12%);
+  }
+}
+
+.banner {
+  min-height: 50rem;
+}
+
+header {
+  overflow: hidden;
+  margin-bottom: 5rem;
+  border-bottom: 0.2px solid rgba($color-grey-meduim, $alpha: 0.2);
+  padding-bottom: 3rem;
+}
+
+.about {
+  height: 90vh;
+  margin-block: 10rem;
+}
+
+.main-app-ui {
+  max-width: 120rem;
+  min-height: 117rem;
+  margin: 7rem auto;
+  background-color: $white;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 2rem 6rem 0.5rem rgba($color-Grey-dark-01, 0.2);
+
+  display: grid;
+  grid-template-rows: minmax(100rem, auto);
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "list recipe";
+}
+
+.cover {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba($color-accent-red-medium, 0.94),
+    rgba($color-accent-red, 1)
+  );
+  min-height: 121rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  overflow: hidden;
+}
+.section {
+  transition: transform 1s, opacity 1s;
+}

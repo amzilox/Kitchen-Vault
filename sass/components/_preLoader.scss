@@ -1,0 +1,32 @@
+.preLoader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba($black, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 1000000;
+
+  .spinner__box {
+    position: absolute;
+    background-color: $white;
+    width: 3rem;
+    height: 3rem;
+    top: 60%;
+    left: 50%;
+    border-radius: 3px;
+    transform: translate(-50%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 3px;
+      fill: $color-Grey--dark;
+      animation: rotate 1s linear infinite;
+    }
+  }
+}

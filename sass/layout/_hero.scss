@@ -1,0 +1,144 @@
+.hero {
+  position: relative;
+  z-index: -1;
+  &__fruit {
+    position: absolute;
+  }
+  &__fruit--1 {
+    top: 5rem;
+    right: -15rem;
+    animation: ToTheLeft 1s ease;
+    @include QueryFor(Tab-Land) {
+      top: 3rem;
+      right: -14rem;
+    }
+    @include QueryFor(Tab-Port) {
+      top: 0;
+      right: -13rem;
+    }
+    @include QueryFor(Phone) {
+      top: 2rem;
+      right: -14rem;
+    }
+    @include QueryFor(Large-Scrn) {
+      top: 10rem;
+    }
+
+    .image-1 {
+      height: 30rem;
+      @include QueryFor(Tab-Land) {
+        height: 27rem;
+      }
+      @include QueryFor(Tab-Port) {
+        height: 23rem;
+      }
+      @include QueryFor(Phone) {
+        height: 25rem;
+      }
+    }
+  }
+  &__fruit--2 {
+    top: 25rem;
+    left: -15rem;
+    animation: ToTheRight 1s ease-in;
+    @include QueryFor(Tab-Land) {
+      top: 32rem;
+      left: -12rem;
+    }
+    @include QueryFor(Tab-Port) {
+      top: 34rem;
+      left: -13rem;
+    }
+    @include QueryFor(Phone) {
+      left: -13rem;
+      top: 41rem;
+    }
+    @include QueryFor(Large-Scrn) {
+      top: 46rem;
+    }
+    .image-2 {
+      height: 25rem;
+      @include QueryFor(Tab-Land) {
+        height: 21rem;
+      }
+      @include QueryFor(Tab-Port) {
+        height: 20rem;
+      }
+    }
+  }
+  &__main-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__heading {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .image-3 {
+      width: 45rem;
+      filter: brightness(90%);
+      @include QueryFor(Tab-Land) {
+        width: 42rem;
+      }
+      @include QueryFor(Tab-Port) {
+        width: 40rem;
+      }
+      @include QueryFor(Large-Scrn) {
+        width: 55rem;
+      }
+    }
+    .image-4 {
+      width: 65rem;
+      margin-top: -14rem;
+      filter: brightness(90%);
+      @include QueryFor(Tab-Land) {
+        width: 58rem;
+        margin-top: -12rem;
+      }
+      @include QueryFor(Phone) {
+        width: 55rem;
+        margin-top: -9rem;
+      }
+      @include QueryFor(Large-Scrn) {
+        width: 77rem;
+      }
+    }
+  }
+
+  &__main-pic {
+    margin-top: -25rem;
+    animation: ToTheTop 0.5s 1s ease-out backwards;
+    @include QueryFor(Tab-Land) {
+      margin-top: -24rem;
+    }
+    @include QueryFor(Tab-Port) {
+      margin-top: -21rem;
+    }
+    @include QueryFor(Phone) {
+      margin-top: -18rem;
+    }
+    @include QueryFor(Large-Scrn) {
+      margin-top: -30rem;
+    }
+    .image-5 {
+      max-width: 130rem;
+      height: auto;
+      animation: spin 180s linear infinite;
+      @include QueryFor(Tab-Land) {
+        max-width: 128rem;
+      }
+      @include QueryFor(Tab-Port) {
+        max-width: 102rem;
+      }
+      @include QueryFor(Phone) {
+        max-width: 80rem;
+      }
+      @include QueryFor(Large-Scrn) {
+        max-width: 160rem;
+      }
+    }
+  }
+}

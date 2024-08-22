@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <!-- favicon path -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <!-- styles Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JS Scripts -->
+    <script type="module" src="js/controller.js"></script>
+    <title>KitchenVault | The Ultimate Recipe Finder</title>
+</head>
+
+<body>
+    <div class="preLoader">
+        <div class="spinner__box">
+            <svg class="spinner__box--icon">
+                <use xlink:href="img/sprite.svg#icon-spinner8"></use>
+            </svg>
+        </div>
+    </div>
+
+    <nav class="nav-sticky">
+        <img src="img/logo.png" alt="startup Logo" class="nav-sticky__logo">
+        <form action="#App" class="nav-sticky__search">
+            <input type="text" name="query" class="nav-sticky__search--input search__field"
+                placeholder="Search over 1,000,000 recipes...">
+            <button class="nav-sticky__search--btn" id="query">
+                <svg class="nav-sticky__search--btn-icon">
+                    <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                </svg>
+            </button>
+        </form>
+        <div class="nav-sticky__right">
+            <div class="nav-sticky__icon-box">
+                <a target="_blank" href="https://github.com/amzilox/" alt="Github">
+                    <svg class="nav-sticky__icon">
+                        <use xlink:href="img/sprite.svg#icon-github-with-circle"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="nav-sticky__favorite">
+                <div class="nav-sticky__icon-box">
+                    <svg class="nav-sticky__icon">
+                        <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                    <span class="nav-sticky__notification hidden">&nbsp;</span>
+                </div>
+                <div class="bookmarks">
+                    <ul class="bookmarks__list">
+                        <div class="message">
+                            <div>
+                                <svg class="bookmarks__msg-icon">
+                                    <use xlink:href="img/sprite.svg#icon-warning1"></use>
+                                </svg>
+                            </div>
+                            <p>
+                                No bookmarks yet. Find a nice recipe and bookmark it :)
+                            </p>
+                        </div>
+
+                        <!-- <li class="preview">
+                            <a class="preview__link" href="#23456">
+                                <figure class="preview__fig">
+                                    <img src="img/test-1.jpg" alt="Test" />
+                                </figure>
+                                <div class="preview__data">
+                                    <h4 class="preview__title">Pasta with Tomato Cream ...</h4>
+                                    <p class="preview__publisher">The Pioneer Woman</p>
+                                </div>
+                            </a>
+                        </li> -->
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="main-header">
+        <div class="header">
+            <container class="hero">
+                <div class="hero__fruit hero__fruit--1">
+                    <img class="image-1" src="img/pepper.webp" alt="peper veggie">
+                </div>
+                <div class="hero__fruit hero__fruit--2">
+                    <img class="image-2" src="img/tomato.webp" alt="tomato fruit">
+                </div>
+                <div class="hero__main-view">
+                    <div class="hero__heading">
+                        <img class="image-3" src="img/heading-p.webp" alt="Original">
+                        <img class="image-4" src="img/subheading-p.png" alt="RECIPES">
+                    </div>
+                    <div class="hero__main-pic">
+                        <img class="image-5" height="1300px" src="img/pizza.webp" alt="Pizza Italiano">
+                    </div>
+                </div>
+            </container>
+        </div>
+        <container class="banner">
+            <div class="banner__img-box">
+                <div class="banner__img banner__img--1">
+                    <img src="img/spice-1.png" alt="Spices" class="banner__img-self">
+                </div>
+                <div class="banner__img banner__img--2">
+                    <img src="img/spice-2.png" alt="Spices" class="banner__img-self">
+                </div>
+                <div class="banner__img banner__img--3">
+                    <img src="img/spice-1.png" alt="Spices" class="banner__img-self">
+                </div>
+                <div class="banner__img banner__img--4">
+                    <img src="img/spice-2.png" alt="Spices" class="banner__img-self">
+                </div>
+            </div>
+            <div class="banner__button">
+                <span class="banner__button--bg">&nbsp;</span>
+                <div class="banner__button--btn"><a href="#App" class="banner__button--link banner-link">search
+                        recipe</a></div>
+                <div class="banner__icon-box">
+                    <a href="#App" class="banner__icon-box--link banner-link">
+                        <svg class="banner__icon-box--icon">
+                            <use xlink:href="img/sprite.svg#icon-chevron-thin-down"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </container>
+    </header>
+    <main>
+        <section class="about section">
+            <div class="about__left-side">
+                <div class="about__span margin-bottom-small">
+                    <span class="about__span-shape">&nbsp;</span>
+                    Delicious Recipes for the Whole Family
+                </div>
+                <h2 class="about__heading-secondary margin-bottom-small">
+                    Delicious Recipes for Every Taste
+                </h2>
+                <p class="about__paragraph margin-bottom-medium">
+                    Dedicated to Recipes You Can Rely On. As a leading recipe resource, our mission is to provide the
+                    freshest, most delicious recipes for every meal.
+                </p>
+                <form action="#App" class="about__search">
+                    <input type="text" name="query" class="about__search--input search__field"
+                        placeholder="Search over 1,000,000 recipes...">
+                    <button class="about__search--btn" id="query">
+                        <svg class="about__search--btn-icon">
+                            <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="about__right-side">
+                <div class="images-wrapper">
+                    <img src="img/half-plate.png" alt="half-plate" class="section-main-pic">
+                    <div class="ingredients-pics">
+                        <img src="img/Cheese.png" alt="Cheese" class="ingredients-pics--1">
+                        <img src="img/Chilli-peppers.png" alt="Chilli-peppers" class="ingredients-pics--2">
+                        <img src="img/flour.png" alt="flour" class="ingredients-pics--3">
+                        <img src="img/Onion.png" alt="Onion" class="ingredients-pics--4">
+                        <img src="img/Pepper-and-garlic.png" alt="Pepper-and-garlic" class="ingredients-pics--5">
+                        <img src="img/Peppers.png" alt="Peppers" class="ingredients-pics--6">
+                        <img src="img/Spinach-leaves.png" alt="Spinach-leaves" class="ingredients-pics--7">
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <div class="cover" id="App">
+            <section class="main-app-ui section">
+                <div class="search-results">
+                    <ul class="results">
+
+
+                        <!-- <li class="preview">
+                            <a class="preview__link preview__link--active" href="#23456">
+                                <figure class="preview__fig">
+                                    <img src="img/test-1.jpg" alt="Test" />
+                                </figure>
+                                <div class="preview__data">
+                                    <h4 class="preview__title">Pasta with Tomato Cream ...</h4>
+                                    <p class="preview__publisher">The Pioneer Woman</p>
+                                </div>
+                            </a>
+                        </li> -->
+                    </ul>
+
+                    <div class="pagination">
+                        <!-- <button class="btn--inline pagination__btn--prev">
+                            <svg class="search__icon">
+                                <use href="img/sprite.svg#icon-arrow-long-left"></use>
+                            </svg>
+                            <span>Page 1</span>
+                        </button>
+                        <button class="btn--inline pagination__btn--next">
+                            <span>Page 3</span>
+                            <svg class="search__icon">
+                                <use href="img/sprite.svg#icon-arrow-long-right"></use>
+                            </svg>
+                        </button> -->
+                    </div>
+
+                    <p class="copyright">
+                        &copy; Copyright by
+                        <a class="github-link" target="_blank" href="https://github.com/amzilox/">Med Hamza AMZIL</a>.
+                        Use
+                        for learning or your portfolio. Don't claim
+                        as your own.
+                    </p>
+                </div>
+                <div class="recipe">
+                    <div class="message">
+                        <div>
+                            <svg>
+                                <use href="img/sprite.svg#icon-emoji-flirt"></use>
+                            </svg>
+                        </div>
+                        <p>Start by searching for a recipe or an ingredient. Have fun!</p>
+                    </div>
+
+                    <!-- <div class="spinner">
+                        <svg>
+                            <use href="img/sprite.svg#icon-spinner2"></use>
+                        </svg>
+                    </div> -->
+
+                    <!-- <div class="error">
+                      <div>
+                        <svg>
+                          <use href="img/sprite.svg#icon-warning1"></use>
+                        </svg>
+                      </div>
+                      <p>No recipes found for your query. Please try again!</p>
+                    </div> -->
+
+
+                    <!-- Recipe Structure here /go see ./recipeView.js -->
+
+                </div>
+            </section>
+        </div>
+        <div class="slider">
+            <div class="list">
+                <div class="list__item"><span class="list__item-content list__item-content--normal">Ingredients</span>
+                </div>
+                <div class="list__item"><span class="list__item-content list__item-content--outlined">Delicious</span>
+                </div>
+                <div class="list__item"><span class="list__item-content  list__item-content--normal">cuisine</span>
+                </div>
+                <div class="list__item"><span class="list__item-content  list__item-content--outlined">Appetizing</span>
+                </div>
+                <div class="list__item"><span class="list__item-content  list__item-content--normal">Cooking</span>
+                </div>
+                <div class="list__item"><span class="list__item-content  list__item-content--outlined">Gourmet</span>
+                </div>
+            </div>
+            <div class="list">
+                <div class="list__item"><span class="list__item-content list__item-content--normal">Ingredients</span>
+                </div>
+                <div class="list__item"><span class="list__item-content list__item-content--outlined">Delicious</span>
+                </div>
+                <div class="list__item"><span class="list__item-content  list__item-content--normal">cuisine</span>
+                </div>
+                <div class="list__item"><span class="list__item-content  list__item-content--outlined">Appetizing</span>
+                </div>
+                <div class="list__item"><span class="list__item-content  list__item-content--normal">Cooking</span>
+                </div>
+                <div class="list__item"><span class="list__item-content  list__item-content--outlined">Gourmet</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer section">
+        <div class="footer__top">
+            <div class="footer__top--cell">
+                <div class="footer__icon-box">
+                    <svg class="footer__icon-box--icon">
+                        <use href="img/sprite.svg#icon-info"></use>
+                    </svg>
+                </div>
+                <h3 class="footer__tertiary-heading">About App</h3>
+                <p class="footer__paragraph">Our mission is to provide the freshest, Best recipes for every meal.</p>
+            </div>
+            <div class="footer__top--cell">
+                <div class="footer__icon-box">
+                    <svg class="footer__icon-box--icon">
+                        <use href="img/sprite.svg#icon-old-phone"></use>
+                    </svg>
+                </div>
+                <h3 class="footer__tertiary-heading">Let's Talk</h3>
+                <p class="footer__paragraph">Phone: +212 689 40 39 85 <br>Fax: +212 689 40 39 85</p>
+            </div>
+            <div class="footer__top--cell">
+                <div class="footer__icon-box">
+                    <svg class="footer__icon-box--icon">
+                        <use href="img/sprite.svg#icon-paper-plane"></use>
+                    </svg>
+                </div>
+                <h3 class="footer__tertiary-heading">Contact Us</h3>
+                <p class="footer__paragraph">Email: amzilhamza45@gmail.com /<br>amzilhamza45@outlook.com</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__bottom--copyright">
+                &copy; Copyright by
+                <a class="footer__bottom--copyright--link" target="_blank" href="https://github.com/amzilox/">Med Hamza
+                    AMZIL</a>
+            </p>
+            <img src="img/logo.png" alt="startup Logo" class="footer__bottom--logo">
+            <button class="footer__bottom--icon-box">
+                <a target="_blank" href="https://github.com/amzilox/" alt="Github">
+                    <svg class="footer__bottom--icon">
+                        <use xlink:href="img/sprite.svg#icon-github-with-circle"></use>
+                    </svg>
+                </a>
+            </button>
+        </div>
+    </footer>
+
+</body>
+
+</html>

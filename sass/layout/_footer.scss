@@ -1,0 +1,88 @@
+.footer {
+  &__top {
+    min-height: 70vh;
+    background-image: url(../img/footer-img.jpg);
+    background-size: cover;
+    background-position: top;
+    padding: 0 8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    border-bottom: 0.2px solid rgba($color-grey-meduim, $alpha: 0.2);
+    padding-bottom: 3rem;
+    @include QueryFor(Tab-Port) {
+      padding-top: 18rem;
+      padding-inline: 8rem;
+      min-height: 35vh;
+      flex-wrap: wrap;
+    }
+    &--cell {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      line-height: 1.7;
+      flex-basis: 25rem;
+    }
+  }
+  &__icon-box {
+    width: 4.5rem;
+    height: 4.5rem;
+    &--icon {
+      padding: 0.5rem;
+      width: 4.5rem;
+      height: 4.5rem;
+      fill: $color-Grey--dark;
+    }
+  }
+
+  /////////////////////////
+
+  &__bottom {
+    font-family: $p-font;
+    background-color: $color-grey-darker;
+    max-height: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 10rem;
+    padding-block: 2rem;
+    &--copyright {
+      font-size: 1.3rem;
+      color: $color-Grey--light-1;
+      @include QueryFor(Tab-Port) {
+        flex-basis: 17%;
+      }
+      &--link,
+      &--link:link,
+      &--link:visited {
+        text-decoration: none;
+        color: $white;
+        border-bottom: 1px solid $white;
+      }
+    }
+    &--logo {
+      height: 3rem;
+      cursor: pointer;
+    }
+    &--icon-box {
+      width: 20rem;
+      background-color: transparent;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+      &:active {
+        transform: translateY(2px);
+      }
+    }
+    &--icon {
+      fill: $color-grey-darker;
+      width: 3.7rem;
+      height: 3.7rem;
+      background-color: white;
+      padding: 3px;
+      border-radius: 7px;
+    }
+  }
+}

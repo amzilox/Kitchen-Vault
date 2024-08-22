@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem + 10px :)
+  scroll-behavior: smooth;
+
+  // MEDIA QUERY:
+
+  @include QueryFor(Tab-Land) {
+    // 1200px
+    // let say here 1rem = 9px so : (9px / 16px)
+    font-size: 56.25%;
+  }
+
+  @include QueryFor(Tab-Port) {
+    // 900px
+    // let say here 1rem = 8px so : (8px / 16px)
+    font-size: 50%;
+  }
+
+  @include QueryFor(Phone) {
+    // 600px
+    // let say here 1rem = 6px so : (6px / 16px)
+    font-size: 37.5%;
+  }
+
+  @include QueryFor(Large-Scrn) {
+    // 1800px
+    // let say here 1rem = 12px so : (12px / 16px)
+    font-size: 75%;
+  }
+}
+
+::selection {
+  background-color: $color-accent-red-medium;
+  color: $white;
+}

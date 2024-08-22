@@ -1,0 +1,186 @@
+.banner {
+  position: relative;
+  text-align: center;
+  background-color: $color-Grey--light-3;
+  &__img-box {
+    min-height: 30rem;
+    margin-top: -25rem;
+    position: relative;
+    @include QueryFor(Tab-Land) {
+      margin-top: -22rem;
+    }
+    @include QueryFor(Tab-Port) {
+      margin-top: -31rem;
+    }
+    @include QueryFor(Phone) {
+      margin-top: -52rem;
+    }
+  }
+
+  &__img {
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+
+    &-self {
+      width: 18rem;
+      @include QueryFor(Phone) {
+        width: 15rem;
+      }
+      @include QueryFor(Large-Scrn) {
+        width: 22rem;
+      }
+    }
+    &--1 {
+      bottom: 14rem;
+      left: 4rem;
+      transform: rotate(6deg);
+      @include QueryFor(Tab-Port) {
+        bottom: 8rem;
+        left: 1rem;
+      }
+      @include QueryFor(Phone) {
+        bottom: 7rem;
+        left: 1rem;
+      }
+      @include QueryFor(Large-Scrn) {
+        bottom: 18rem;
+      }
+    }
+    &--2 {
+      bottom: 8rem;
+      left: 27rem;
+      transform: rotate(-68deg) scale(1.1);
+      @include QueryFor(Tab-Port) {
+        bottom: 5rem;
+        left: 24rem;
+      }
+      @include QueryFor(Phone) {
+        bottom: 6rem;
+        left: 18rem;
+        transform: rotate(-68deg) scale(1);
+      }
+      @include QueryFor(Large-Scrn) {
+        bottom: 13rem;
+        left: 32rem;
+      }
+    }
+    &--3 {
+      bottom: 5rem;
+      right: 22rem;
+      transform: rotate(130deg) scale(1.2);
+      @include QueryFor(Tab-Port) {
+        bottom: 2rem;
+        right: 16rem;
+        transform: rotate(130deg) scale(1.1);
+      }
+      @include QueryFor(Phone) {
+        bottom: 3rem;
+        right: 13rem;
+      }
+      @include QueryFor(Large-Scrn) {
+        bottom: 7rem;
+        right: 28rem;
+      }
+    }
+    &--4 {
+      bottom: 23rem;
+      right: 4rem;
+      transform: rotate(75deg) scale(1.5);
+      @include QueryFor(Tab-Port) {
+        bottom: 16rem;
+        right: 1rem;
+      }
+      @include QueryFor(Phone) {
+        bottom: 14rem;
+        right: 1rem;
+      }
+      @include QueryFor(Large-Scrn) {
+        bottom: 28rem;
+      }
+    }
+  }
+  &__button {
+    position: relative;
+    margin-top: -19rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include QueryFor(Large-Scrn) {
+      margin-top: -24rem;
+    }
+    &--bg {
+      height: 20rem;
+      width: 20rem;
+      background-color: $color-accent-yellow;
+      border-radius: 50%;
+      display: flex;
+      z-index: -1;
+      @include QueryFor(Large-Scrn) {
+        width: 22rem;
+        height: 22rem;
+      }
+    }
+    &--btn {
+      position: absolute;
+      text-align: center;
+      height: 17rem;
+      width: 17rem;
+      background-color: $white;
+      border-radius: 50%;
+      top: 1.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include QueryFor(Large-Scrn) {
+        height: 19rem;
+        width: 19rem;
+      }
+    }
+    &--link,
+    &--link:link,
+    &--link:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-Grey--dark-1;
+      font-size: 3.5rem;
+      font-weight: 700;
+      @include QueryFor(Large-Scrn) {
+        font-size: 4rem;
+      }
+    }
+  }
+  &__icon-box {
+    position: absolute;
+    transition: all 0.3s;
+    top: -0.5rem;
+    @include QueryFor(Large-Scrn) {
+      top: -0.9rem;
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+    &--link,
+    &--link:link,
+    &--link:visited {
+      display: inline-block;
+      text-decoration: none;
+      width: 100%;
+    }
+    &--icon {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      padding: 1.2rem;
+      background-color: $color-accent-red;
+      fill: $white;
+      @include QueryFor(Large-Scrn) {
+        width: 6rem;
+        height: 6rem;
+      }
+      &:focus {
+        fill: $white;
+      }
+    }
+  }
+}

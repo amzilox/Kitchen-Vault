@@ -1,0 +1,59 @@
+/* 
+// COLORS
+
+--black: #0000;
+--white: #ffff;
+--color-grey-light: #a8a8a8;;
+--color-grey-meduim: #7e7e7e;
+--color-grey-aluminium: #80858F;
+
+--color-accent-red: #bd1f17;
+--color-accent-red-light: #dc3131;
+--color-accent-yellow: #ECBA23;
+
+*/
+
+$black: #0000;
+$white: #ffff;
+$color-grey-light-1: #f9f5f3; // Light backgroundS
+$color-Grey--light-1: #e4e3e3;
+$color-Grey--light-2: #f4f2f2;
+$color-Grey--light-3: #f0eeee;
+
+$color-grey-light: #a8a8a8;
+$color-grey-meduim: #7e7e7e;
+$color-grey-aluminium: #80858f;
+
+$color-Grey--dark: #232323;
+$color-Grey--dark-1: #333;
+$color-Grey--dark-2: #777;
+$color-Grey--dark-3: #999;
+$color-grey-darker: #37383d;
+
+$color-Grey-dark-01: #615551; // Normal text
+$color-Grey-dark-02: #918581; // Lighter text
+
+$color-accent-red: #bd1f17;
+$color-accent-red-medium: #c7220e;
+$color-accent-red-light: #dc3131;
+$color-accent-red-lighter: #e57373;
+$color-grad-1: #f48982;
+$color-accent-yellow: #ecba23;
+
+$grade1: #f28500;
+$grade2: #d7263d;
+
+$gradient: linear-gradient(
+  to right bottom,
+  $color-accent-yellow,
+  $color-accent-red-light
+);
+
+$gradient1: linear-gradient(
+  to right bottom,
+  rgba($grade1, 0.6),
+  rgba($grade2, 0.701)
+);
+
+$heading-font: "Antonio", sans-serif;
+$p-font: "Schibsted Grotesk", sans-serif;

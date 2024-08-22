@@ -1,0 +1,139 @@
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  @include QueryFor(Phone) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 6rem;
+  }
+  &__left-side {
+    padding-left: 18rem;
+    padding-right: 8rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    @include QueryFor(Tab-Port) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+    @include QueryFor(Phone) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+      text-align: center;
+      width: 70%;
+      z-index: 22;
+    }
+  }
+
+  &__search {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    @include QueryFor(Phone) {
+      justify-content: center;
+    }
+    &--input {
+      font-family: $p-font;
+      font-size: 1.6rem;
+      font-weight: 500;
+      background-color: $color-Grey--light-2;
+      border: none;
+      padding: 1.5rem 3rem;
+      border-radius: 0.7rem;
+      width: 75%;
+      margin-right: -4.5rem;
+      transition: all 0.5s ease;
+      &:focus {
+        outline: none;
+        width: 85%;
+        background-color: $color-Grey--light-3;
+      }
+    }
+    &--btn {
+      border: none;
+      background-color: $color-Grey--light-2;
+      &:focus {
+        outline: none;
+      }
+      &:active {
+        transform: translateY(2px);
+      }
+      &-icon {
+        height: 2.7rem;
+        width: 2.7rem;
+        fill: $color-Grey--dark-1;
+      }
+    }
+  }
+  &__right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    @include QueryFor(Phone) {
+      width: 70%;
+    }
+    .images-wrapper {
+      position: relative;
+      .section-main-pic {
+        width: 30rem;
+        @include QueryFor(Tab-Port) {
+          width: 26rem;
+        }
+        @include QueryFor(Phone) {
+          width: 30rem;
+        }
+      }
+
+      .ingredients-pics {
+        & > * {
+          width: 12rem;
+          position: absolute;
+          @include QueryFor(Tab-Port) {
+            width: 9rem;
+          }
+          @include QueryFor(Phone) {
+            width: 12rem;
+          }
+        }
+
+        &--1 {
+          top: 19rem;
+          transform: rotate(210deg) scale(0.8);
+          left: 4.5rem;
+        }
+        &--2 {
+          top: 2.5rem;
+          transform: rotate(32deg);
+          left: -1.5rem;
+        }
+        &--3 {
+          top: 18rem;
+          left: -0.5rem;
+        }
+
+        &--4 {
+          top: 8rem;
+          left: 4rem;
+          transform: rotate(-7deg) scale(0.6);
+        }
+        &--5 {
+          top: -3rem;
+          left: 4.5rem;
+          transform: rotate(103deg) scale(0.8);
+          z-index: 1;
+        }
+        &--6 {
+          top: 4rem;
+          left: 4.5rem;
+        }
+        &--7 {
+          top: 11rem;
+          transform: rotate(-92deg) scale(0.65);
+          left: -3rem;
+        }
+      }
+    }
+  }
+}

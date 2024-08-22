@@ -1,0 +1,165 @@
+/* 
+// FONTS
+
+--heading-font: 'Antonio', sans-serif;
+--p-font: 'Schibsted Grotesk', sans-serif;
+*/
+
+body {
+  font-family: "Antonio", sans-serif;
+  line-height: 1.5;
+}
+
+/////////////////////////////////
+/// ABOUT:
+.about {
+  &__span {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    color: $color-accent-red;
+    @include QueryFor(Phone) {
+      padding-top: 2rem;
+      justify-content: center;
+      font-size: 3rem;
+    }
+    &-shape {
+      display: inline-block;
+      width: 30px;
+      background-color: $color-accent-red;
+      height: 2px;
+      margin-top: 0.6rem;
+      margin-right: 1.2rem;
+    }
+  }
+  &__heading-secondary {
+    font-size: 6rem;
+    font-weight: 700;
+    color: $color-Grey--dark;
+    @include QueryFor(Tab-Port) {
+      font-size: 5rem;
+    }
+  }
+  &__paragraph {
+    font-family: $p-font;
+    font-size: 1.8rem;
+    line-height: 1.7;
+    color: $color-grey-aluminium;
+    @include QueryFor(Phone) {
+      font-size: 2rem;
+      padding: 2rem;
+    }
+  }
+}
+
+/////////////////////////////////////
+/// PREVIEW:
+.preview {
+  &__title {
+    grid-column: 1/-1;
+    font-size: 1.6rem;
+    color: $color-accent-red-light;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    // This is how text is truncated!
+    text-overflow: ellipsis;
+    max-width: 25rem;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__publisher {
+    font-size: 1.3rem;
+    color: $color-Grey-dark-02;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
+
+////////////////////////
+/// RECIPE:
+.recipe {
+  &__title {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 20%) skewY(-6deg);
+    color: #fff;
+    font-weight: 700;
+    font-size: 3.25rem;
+    text-transform: uppercase;
+    width: 50%;
+    line-height: 1.95;
+    text-align: center;
+
+    span {
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      padding: 1.3rem 2rem;
+      background-image: $gradient1;
+    }
+  }
+}
+
+.error,
+.message {
+  p {
+    margin-left: 1.5rem;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    font-weight: 600;
+  }
+}
+.message {
+  p {
+    font-size: 1.7rem;
+    padding-block: 2rem;
+    line-height: 1.7;
+    font-family: $p-font;
+    font-weight: 500;
+    color: $color-Grey--dark-1;
+  }
+}
+
+////////////////////////
+/// SLIDER:
+.slider {
+  .list__item-content {
+    font-size: 11rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    &--normal {
+      color: $color-Grey--dark;
+    }
+
+    &--outlined {
+      color: $color-accent-red-light;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 3px;
+    }
+  }
+}
+
+//////////////////////
+/// FOOTER:
+.footer {
+  &__tertiary-heading {
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-block: 1rem;
+    @include QueryFor(Tab-Port) {
+      font-weight: 700;
+    }
+  }
+
+  &__paragraph {
+    text-align: center;
+    font-size: 1.6rem;
+    color: $color-Grey--dark-1;
+    @include QueryFor(Tab-Port) {
+      font-size: 1.8rem;
+    }
+  }
+}

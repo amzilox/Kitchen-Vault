@@ -1,0 +1,93 @@
+%btn {
+  background-image: $gradient;
+  border-radius: 10rem;
+  border: none;
+  text-transform: uppercase;
+  color: $white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  & > *:first-child {
+    margin-right: 1rem;
+  }
+}
+
+%nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+  background-color: rgba($white, $alpha: 0.11);
+  backdrop-filter: blur(6px);
+  padding: 3rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 88vw;
+  z-index: 10000;
+}
+
+// MEDIA QUERY MANAGER
+
+/*
+THE RESOLUTIONS:
+0 ---> 600px : Phone
+600 -> 900px : Tablet Portrait
+900 -> 1200px: Tablet Landscape
+[In Between..] : When our original style content
+1800 >>      : Large Screen
+
+Input Var Values:
+KNOWING THAT 1em = 16px;
+__ Phone --> 600px >> 600 / 16 = 37.5em;
+__ Tab-Port --> 900px >> 900 / 16 = 56.25em;
+__ Tab-Land --> 1200px >> 1200 / 16 = 75em;
+__ Large-Scrn --> 1800px >> 1800 / 16 = 112.5em
+
+
+
+ORDER OF MODIFICATION:
+Base + typography > general layout + grid > page layout > components
+*/
+
+@mixin QueryFor($device) {
+  // better to use em unit instead of px;
+  @if $device == Phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $device == Tab-Port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $device == Tab-Land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $device == Mid-Scrn {
+    @media only screen and (min-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $device == Large-Scrn {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
