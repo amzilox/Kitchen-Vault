@@ -4,13 +4,12 @@
   "description": "kitchenvault | Recipe finder app",
   "default": "index.html",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "live-server",
+    "watch:sass": "sass --watch sass/main.scss:css/style.css",
     "parcel-init": "parcel index.html",
-    "start": "npm-run-all --parallel watch:sass parcel-init devserver",
-    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "start": "npm-run-all --parallel watch:sass parcel-init",
+    "compile:sass": "sass sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "compress:css": "sass css/style.prefix.css css/style.css --style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css",
     "build:js": "parcel build index.html --dist-dir ./dist",
     "build": "npm-run-all build:css build:js"
@@ -19,9 +18,9 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.19",
-    "node-sass": "^9.0.0",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^11.0.0"
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.77.8"
   },
   "dependencies": {
     "core-js": "^3.38.0",
